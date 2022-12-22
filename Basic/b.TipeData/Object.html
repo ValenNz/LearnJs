@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+        <script>           
+            /*   Tipe data object
+                  - Tipe data object adalah tipe data yang mirip dengan tipe data Array
+                  - Yang membedakan adalah index pada tipe data object bisa menggunakan string
+                  - Index di object biasanya disebut attributes atau properties, bukan index
+            */
+                /* Cara 1 */
+            const orang = {};                               // Membuat object kosong
+            orang["nama"] = "Nuevalen Refitra Alswando";        // Add index nama
+            orang["alamat"] = "JL.YNTKS";                       // Add index alamat
+            orang["umur"] = 40;                                 // Add index umur
+
+            console.table(orang);                               // Print data array dalam bentuk table
+
+            delete orang["alamat"];                             // Delete index object
+            console.table(orang);                               // Print data array dalam bentuk table
+
+                /* Membuat object */
+            const person ={                                     // Membuat Object kosong
+            name : "Nuevalen Refitra Alswando",
+            address : "Indonesia",
+            age : 30
+            };
+           console.table(person);                               // Print data array dalam bentuk table
+
+            /* Acc property */   
+           console.info(`Nama : ${person.name}`)
+           console.info(`Alamat : ${person.address}`)
+           console.info(`Umur : ${person.age}`)
+        </script>
+</body>
+</html>

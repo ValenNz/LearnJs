@@ -1,0 +1,13 @@
+---------- Document Object Model ---------------
+
+Document Object Model adalah sebuah antarmuka pemrograman untuk HTML, XML dan SVG yang bersifat lintas platform dan language-independent. Sebuah peramban web tidak harus menggunakan DOM untuk menampilkan dokumen HTML. Namun DOM diperlukan oleh JavaScript yang akan mengubah tampilan sebuah situs web secara dinamis. 
+
+----------- EVENS ---------
+Event pada js mepresentasikan sebuah kejadian terjadi dalam DOM
+(mose event, animasi dll)
+
+Cara mendengarkan event
+-   Event Handler
+        inlinse HTML atribute
+        element method
+-   addEventListener()

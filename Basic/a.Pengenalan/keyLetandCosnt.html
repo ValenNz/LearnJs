@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let and Conts</title>
+</head>
+<body>
+    <script>
+        /* let
+              - Sebelum tahun 2015, kata kunci untuk membuat variable hanya bisa menggunakan kata kunci var
+              - Namun tahun 2015 sejak versi ECMAScript 2015, diperkenalkan kata kunci baru untuk membuat variable, let dan const
+              - JavaScript sekarang tidak direkomendasikan lagi menggunakan kata kunci var untuk membuat variable, namun diganti 
+                dengan let, hal ini dikarenakan ada masalah dari desain awal var (akan kita bahas di chapter tersendiri)
+        */
+        let firstName = "Nuevalen Refitra Alswando";    // Bisa dirubah
+        // firstName = "Pemuda Pancasila";              // Nuevalen Refitra Alswando -> Pemuda Pancasila
+        console.log(firstName);                         // Output Program
+
+
+        /* Const
+              - Kata kunci let itu seperti kata kunci var, dimana data di variable tersebut bisa diubah-ubah sesuka kita
+              - Sedangkan kata kunci const berbeda, ketika sebuah variable sudah diisi di variable const, maka variable tersebut 
+                tidak bisa diubah lagi value nya
+              - Variable sejenis ini kadang dibilang juga constant
+        */
+        const application = "Belajar JavaScript";       // Tidak dapat dirubah
+        // application = "Budi";                        // Tidak akan dieksekusi
+        console.log(application);                       // Output Program
+
+    </script>
+    
+</body>
+</html>

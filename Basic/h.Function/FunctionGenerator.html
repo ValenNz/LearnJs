@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*  Function Generator 
+            -   Function generator adalah function yang digunakan untuk membuat data generator
+            -   Generator adalah data yang bisa di interasi seperti Array
+            -   Untuk membuat function generator, kita perlu menggunakan tanda * (bintang) setelah kata function
+            -   Dan untuk mengembalikan data di tiap iterasi, kita bisa gunakan kata kunci yield diikuti datanya
+            -   hanya bisa interaksi tidak dapat diambil diganti dihapus
+        */
+       
+        /* Simple */
+        function* createNames(){
+            yield "Nuevalen";       
+            yield "Refitra";
+            yield "Alswando";
+        }
+
+        console.info(createNames());
+
+        //  console.info(names[0]) // tidak bisa mengambil index
+
+        const names = createNames();
+        for (const name of names){
+            console.info(name);
+        }
+
+        /* Complecs */
+        function* buatGanjil(value){
+            for (let i = 1; i <= value; i++){
+                if (i % 2 === 1){  // jika ganjil
+                    yield i;     // maka akan mengenerate
+                }
+            }
+        }
+        const angkaGanjil = buatGanjil(10);
+        for (const angka of angkaGanjil){
+            console.info(angka);
+        }
+
+        /* Lazy Evaluation 
+            -   Generator itu sifatnya lazy
+            -   Jadi artinya jika kita tidak data belum kita ambil dari generator, maka yield selanjutnya tidak akan di eksekusi
+
+        */
+
+        function buatGenap(value){
+            for (let i = 1; i <= value; i++){
+                if (i % 2 === 0){
+                    console.info(`Yield ke ${i}`);
+                }
+            }
+        }
+
+        // Eiger
+        function buatGenapArray(value){
+            const result = [];
+            for (let i = 1; i <= value; i++){
+                if (i % 2 === 0){
+                    console.info(`Yield ke ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        const angkaGenap = buatGenap(10);
+        for (const angka of angkaGanjil){
+            console.info(angka);
+        }
+    </script>
+</body>
+</html>

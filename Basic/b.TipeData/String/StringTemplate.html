@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <pre>
+        <script>
+             /*  Sting Template 
+                  - Kita sudah tahu bahwa untuk menambahkan string dengan data lain, kita bisa menggunakan operator + (plus)
+                  - Namun pada kasus tertentu, penggunaan operator + (plus) sangat menyulitkan, apalagi jika dalam jumlah banyak
+                  - JavaScript memiliki fitur yang bernama String Template, dimana kita bisa mensubtitusi data dari luar String ke dalam 
+                    String,
+                    seperti mengambil data variable, atau bahkan melakukan operasi matematika
+                  - Untuk menggunakan String Template, cara pembuatan String nya harus menggunakan ` (backtick), bukan ‘ (petik satu)
+                    atau “ (petik dua)
+            */
+            const nama = "Nuevalen Refitra Alswando ";  // Make String
+            const template = `Name : ${nama}`;          // Subtitusi variabel |  ... + nama -> ${nama} |
+            console.info(template);                     // Output Programe
+
+
+            /* Expretion in String Template */
+            const nama1 = "Nuevalen Refitra Alswando ";                        // Make var 
+            const nilai = 80;                                                  // Make var2
+            const Expretion = `Name : ${nama1}, lulus :  ${nilai > 70}`;       // subtitusi var 
+            console.info(Expretion);                                           // Output Program
+
+
+
+            /* Multiline String
+                - String template juga bisa digunakan untuk membuat string multi line
+                - Kita cukup tambahkan enter di text nya
+            */
+            document.writeln(" ");
+            let multiLine = 
+            `Nama : Nuevalen Refitra 
+Status : Jomblo `;                          // Deklarasi variabel
+             document.writeln(multiLine);
+        </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+</head>
+<body>
+    <script>
+        /* Static Method
+            -   Kata kunci static juga tidak hanya bisa ditambahkan di field, tapi juga di method
+            -   Jika kita tambahkan di method, artinya method tersebut jadi milik class nya, bukan prototype
+            -   Dan untuk mengakses method tersebut, kita juga bisa lakukan seperti mengakses static class field
+        */
+
+        class MathUtil {
+            static sum(...numbers){
+                let totoal = 0;
+                for (const number of numbers){
+                    total += number;
+                }
+                return total;
+            }
+        }
+
+        const sum = MathUtil.sum(1, 1, 1, 1, 1);
+        console.log(sum);
+    </script>
+</body>
+</html>

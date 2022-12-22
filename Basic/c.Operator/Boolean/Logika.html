@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logika</title>
+</head>
+<body>
+    <pre>
+        <script>
+        document.writeln("*** Operator Logika ***");
+
+        /* Operator Logika
+            -   Operator logika adalah operator untuk dua buah data boolean
+            -   Hasil dari operator logika adalah boolean lagi
+        */
+
+        /* Dan */
+        const and = true && true;    //  selain itu false
+        document.writeln(and);       // Output Program
+
+        /* Atau */
+        const or = false || false;   // Selain itu true
+        document.writeln(or);        // Output Program
+
+        /* Kebalikan */
+        const opposite =  !false ;   // false -> true
+        document.writeln(opposite);  // Output Program
+            
+
+        
+        /*  Operator Logika di Non Boolean
+            Sebelumnya kita sudah tahu bahwa operator logika AND (&&) dan OR (||)  digunakan untuk dua data boolean
+            Namun berbeda di JavaScript, kita bisa menggunakan operator logika AND dan OR untuk tipe data non boolean
+
+            Operator OR (||) di Non Boolean
+            Operator logika OR (||), membaca dari kiri ke kanan. 
+            Operator ini akan mengambil nilai pertama yang truthy. 
+            Jika tidak ada satupun yang bernilai truthy, maka yang terakhir yang akan diambil
+
+                    false      : Boolean false
+                    0, -0      : Number 0 dan -0 dianggap false
+                    "", '', `` : Semua Strin gkosong dianggap false
+                    null       : null dianggap false
+                    undifined  : Undifined dianggap false
+                    NaN        : NaN dianggap false
+            
+                    truety     => Kebalikan
+        */
+
+        console.info("Hello" || ''); // hello
+        console.info(" " || []); // []
+        console.info("0" || "NOL"); // "0"
+        console.info(0 || "NOL"); //NOL
+        console.info(null || "NULL"); // NULL
+        console.info(undefined || "UNDEFINED"); // UNDEFINED
+
+        /*      Operator AND (&&) di Non Boolean
+            Operator logika AND (||), membaca dari kiri ke kanan. 
+            Operator ini akan mengambil nilai pertama yang falsy. 
+            Jika tidak ada satupun yang bernilai falsy, maka yang terakhir yang akan diambil
+
+        */
+
+        console.info("Hello" && ''); // ''
+        console.info(" " && []); // ""
+        console.info("0" && "NOL"); // "NOL"
+        console.info(0 && "NOL"); // 0
+        console.info(null && "NULL"); // null
+        console.info(undefined && "UNDEFINED"); // undefined
+        console.info("undefined" && "null"); // null (menagmbil paling kanan)
+
+
+        /* Penggunaan */
+
+        const person = {
+            firsName : " ",
+            lasName : "Refitra"
+        }
+
+        const name = person.firsName || person.lasName;
+        console.info(name);
+
+        </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <pre>
+        <script>
+            document.writeln(" ");
+
+            /*
+            undefined adalah sebuah kata kunci di JavaScript
+            undefined adalah sebuah tipe data
+            Sebuah variable yang belum ditambahkan nilai, maka artinya variable tersebut merupakan tipe undefined
+            Kadang untuk programmer JavaScript pemula undefined ini memang agak sedikit membingungkan
+            undefined itu berbeda dengan null di bahasa pemrograman lain
+            variabel yang belum didefinisikan 
+            */
+
+            /* Variabel */
+            let name ; // variabel tidak di isi
+            if(name == undefined){
+                document.writeln("UNDEFINED"); // Belum ada value
+            } else {
+                document.writeln("DEFINED");    // Sudah ada value
+            }
+
+            /* Array */
+            const nama = ["Nuevalen", "Refitra"];
+            if (nama[2] === undefined ){ // mengakses array / index yang tidak terdefinisikan
+                document.writeln("array undefined");
+            } else {
+                document.writeln("array defined");
+            }
+
+            /*  NULL
+                    null merupakan representasi data kosong
+                    null berbeda dengan undefined, null berarti variable sudah ditambahkan value nya, hanya saja value nya null
+                    Sedangkan undefined adalah variable belum ditambahkan value apapun
+            */
+           let firstName = null; // variabel tanpa data
+           if(firstName === undefined){
+            document.writeln("Its Undefined");
+           } else if (firstName === null){
+            document.writeln("Its Null");
+           } else {
+            document.writeln(`Its ${firstName}`);
+           }
+
+
+        </script>
+    </pre>
+</body>
+</html>

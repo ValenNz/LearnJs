@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <script>
+        /*  Error Handling
+            -   Saat terjadi error di kode program JavaScript, kadang kita tidak ingin program kita berhenti
+            -   Di JavaScript, kita bisa menangkap jika terjadi error
+            -   Kita bisa menggunakan try catch statement untuk menangkap error
+            -   Pada block try, kita akan mencoba mengakses kode program yang bisa menyebabkan error, dan jika terjadi error, block try
+                akan berhenti dan otomatis masuk ke block catch
+            -   Jika tidak terjadi error, block catch tidak akan dieksekusi
+        */
+
+        /*  Katat Kunci Finally
+            -   Kadang kita ingin melakukan sesuatu entah itu terjadi error ataupun tidak
+            -   Dalam try catch, kita bisa menambahkan block finally
+            -   Block finally ini akan selalu dieksekusi setelah try catch selesai, entah terjadi error atau tidak, block finally akan
+                selalu dieksekusi
+        */
+
+        class MathUtil {
+            static sum(...numbers){
+                if(numbers.length === 0){
+                    throw new Error("Total parameter harus leih dari 0");
+                }
+
+                let result = 0;
+                for(const number of numbers){
+                    result += number;
+                }
+                return result;
+
+                try {
+                    console.log(MathUtil.sum());
+                    console.log("KOde Block Try Akan Berhenti");
+                } catch (error){
+                    console.log(`Terjadi error : ${error.messege}`)
+                } finally {
+                    console.log("Kode Program Selesai")
+                }
+                console.log("Kode Program Tidak Akan Berhasil");
+            }            
+        }
+
+        /* Try Finally
+            -   Kata kunci finally juga bisa digunakan tanpa perlu menggunakan catch 
+            -   Biasanya ini digunakan dalam kasus tertentu
+        */
+
+        class Counter {
+            constructor(){
+                this.valur = 1;
+            }
+
+            next(){
+                try {
+                    return this.value;
+                } finally {
+                    this.value++
+                }
+            }
+        }
+
+        const counter = new Counter();
+        console.log(counter.next());
+        console.log(counter.next());
+        console.log(counter.next());
+        console.log(counter.next());
+        console.log(counter.next());        
+    </script>
+</body>
+</html>

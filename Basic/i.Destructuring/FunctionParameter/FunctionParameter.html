@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameter</title>
+</head>
+<body>
+    <script>
+        /*  Destruction Function Parameter
+            -   Destructuring tidak hanya bisa dilakukan di variable, tapi juga bisa dilakukan di function parameter
+            -   Hal ini membuat kita mudah ketika ingin mengambil nested data dalam array atau object dalam function
+        */
+
+        /* 1 */
+        function displayPerson({firstName, middleName, lastName}){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        const person={
+            firstName:"Nuevalen",
+            middleName:"Refitra",
+            lastName: "Alswando"
+        };
+
+        displayPerson(person);
+
+        /* 2 */
+        function sum([first, second]){
+            return first + second;
+        }
+        console.info(sum([10,10]));
+        console.info(sum([20,10]));
+    </script>
+</body>
+</html>

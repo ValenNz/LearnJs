@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Inharitance Salah</title>
+</head>
+<body>
+    <script>
+        /*  Prototype Inharitance
+                -   Sekarang kita sudah tahu, bahwa prototype selalu memiliki parent, artinya dia adalah turunan, parent tertinggi
+                    adalah Object prototype
+                -   Pertanyaannya bagaimana jika kita ingin melakukan inheritance ke Prototype lain?
+                -   Hal ini juga bisa dilakukan, namun agak sedikit tricky, karena hal ini, sebenarnya untuk JavaScript modern, tidak 
+                    direkomendasikan lagi praktek OOP menggunakan Prototype, karena di ES6 sudah dikenalkan kata kunci class yang akan nanti dibahas di chapter tersendiri
+        */
+
+        /* Prototype Inharitance Salah(1) */
+        function Employee(name){
+            this.name = name;
+        }
+
+        function Manager(name){
+            this.name = name;
+        }
+
+        Manager.prototype = Employe.prototype;
+
+        Manager.prototype.sayHello = function (name){
+            console.log(`Hello ${name}, My name is Manager ${this.name}`);
+        }
+
+        Employee.prototype.sayHello = function (name){
+            console.log(`Hello ${name}, My name is Employee ${this.name}`)
+        }
+
+        /* Prototype Inharitance Salah(2) */
+        const employee = new Employee("Valen");
+        employee.sayHello("Budi");
+
+        const manager = new Manager("Raharjo");
+        manager.sayHello("Pak Joko");
+
+
+    </script>
+</body>
+</html>

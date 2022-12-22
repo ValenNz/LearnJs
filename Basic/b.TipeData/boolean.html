@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+<body>
+    <pre>
+        <script>
+            /* Tipe Data Bolean 
+                  - Tipe data boolean adalah tipe data yang berisikan data kebenaran, artinya hanya ada dua data, benar dan salah 
+                    (yes atau no)
+                  - Benar di representasikan dengan kata kunci true, dan salah direpresentasikan dengan kata kunci false
+                  - Walaupun tipe data boolean merupakan tipe data yang sangat sederhana, tapi tipe data boolean akan banyak digunakan 
+                    di berbagai fitur pemrograman
+            */
+            document.writeln("")
+            document.writeln("*** Tipe Data Bolean ***")
+            document.writeln(true);     // Benar
+            document.writeln(false);    // Salah
+            document.writeln("</br>")
+
+
+            /*  FALSY
+                Falsy atau kadang ditulis falsey, adalah value yang ketika dalam konteks boolean, dia dianggap false
+                Ini adalah salah satu fitur unik dari JavaScript, yang berguna, namun kadang juga sering membingungkan
+                Jadi di JavaScript, kondisi itu tidak hanya bisa boolean, tapi diluar boolean pun bisa, namun kita harus tahu beberapa data falsy, atau dianggap false
+
+                    false      : Boolean false
+                    0, -0      : Number 0 dan -0 dianggap false
+                    "", '', `` : Semua Strin gkosong dianggap false
+                    null       : null dianggap false
+                    undifined  : Undifined dianggap false
+                    NaN        : NaN dianggap false
+            */
+
+            /*  TRUTHY
+                Truthy adalah kebalikan dari falsy, dimana data nya dianggap bernilai true
+                Sederhana sekali sebenarnya untuk mengetahui sebuah data itu adalah truthy, yaitu data yang bukan bernilai falsy 
+            */
+
+            let data ="Ho";
+
+            if (data){
+                document.writeln("True");
+            } else {
+                document.writeln("FALSE")
+            }    
+        </script>
+    </pre>
+</body>
+</html>

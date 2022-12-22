@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of</title>
+</head>
+<body>
+    <pre>
+        <script>
+            /*  For Of
+                - Jika For In digunakan untuk melakukan iterasi property atau index, berbeda dengan For Of, ini digunakan untuk melakukan iterasi terhadap isi value dari iterable object, seperti Array, String dan lain-lain
+                - For of tidak bisa digunakan untuk melakukan iterasi data di object, karena object bukanlah iterable.
+            */
+
+            /* For Of Array */
+            const names =["Nuevalen",  "Refitra", "Alswando"];
+
+            for (const name of names){
+                console.info(`${name}`)
+            }
+
+            /* For Of String */
+            const name = " Nuevalen Refitra Alswando";
+
+            for (const char of name){
+                console.info(`${char}`);
+            }
+        </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Nested Objct</title>
+</head>
+<body>
+    <script>
+        
+        const person = {
+            firstName : "Nuevalen",
+            middleName: "Refitra",
+            lastName: "Alswando",
+            address : {
+                street: "Jalan jalan",
+                city: "Malang",
+                country: "Indonesia"
+            },
+            hobby: "Ngoding",   
+            spesialist: "Backend Development"
+        };
+
+        const {firstName, lastName, address: {country, city, street}, ...others} = person;
+
+        console.info(firstName);
+        console.info(lastName);
+        console.info(country);
+        console.info(city);
+        console.info(street);
+        console.info(others);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+            
+            /* Array
+                  - Array adalah tipe data yang berisikan kumpulan data 
+                  - Array di JavaScript memiliki sifat dinamis, artinya datanya bisa bertambah dengan sendirinya saat kita memasukkan
+                    data ke dalam Array
+
+                    Cara Kerja : 
+                        - Setiap data di Array akan disimpan dalam posisi berurutan, dimana urutan pertama dimulai dari nomor 0
+                        - Setiap kita menambah data ke Array, otomatis data akan disimpan di urutan terakhir
+                        - Urutan di Array, kita sebut dengan index
+                        - Data di dalam Array tidak ada batasannya harus data apa
+                        - Jadi kita bisa memasukkan data apapun ke dalam Array
+                        - Bahkan kita juga bisa memasukkan Array ke dalam Array jika kita mau
+             */
+
+            /* Make array */
+            let arrayKosong =[];                                        // Data array kosong
+            let arrayIsi = ["Nuevalen" , "Refitra", "Alswando"];        // Data array isi
+            console.table(arrayIsi);                                    // Print data array
+            console.table([arrayIsi]);
+
+            /* Add data */
+            let name = [];                       // Membuat array (data array kosong)
+            name.push("Budi");                   // Menambah data ke Array (index 0)
+            name.push("Raharjo", "Purwo");       // Menambah data ke Array (index 1. index 2)
+            name.push("Bin", "Adidtya"); 
+            console.table(name);                 // Output data array dalam bentuk table
+
+            // /* Change data */
+            name[2] =("Alswando");       // Mengubah data di posisi index
+            console.table(name);         // Print data array dalam bentuk table
+            console.info(name.length);   // (array.length) : print panjang Array
+            console.info(name[1]);       // Output + Acc data di index
+
+            /* Delete data */
+            delete name[1];              // Menghapus data di posisi index, namun index tidak bergeser
+            console.table(name);         // Output data array dalam bentuk table
+
+            name.push(["Recha", "Audiria"]);    // Add array di dalam array
+            console.table(name);                // Print data array dalam bentuk table
+
+            /*  Associative Array
+                    -   Di bahasa pemrograman lain seperti PHP, kita bisa menggunakan index beruba tipe data lain selain number, misal
+                        string
+                    -   Fitur ini biasanya disebut associative array atau hash
+                    -   Di JavaScript associative array tidak didukung. 
+                    -   Jika kita memaksa memasukkan data bukan number di index Array, maka JavaScript akan merubah tipe data Array
+                        tersebut menjadi object, dan ini bisa berbahaya, karena beberapa operasi di array mungkin bisa berubah hasilnya
+            */
+
+    </script>
+   
+</body>
+</html>

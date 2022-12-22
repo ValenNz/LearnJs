@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <pre>
+        <script>
+            document.writeln(" ");
+
+            /*  Foor Loop
+                - For adalah salah satu kata kunci yang bisa digunakan untuk melakukan perulangan
+                - Blok kode yang terdapat di dalam for akan selalu diulangi selaa kondisi for terpenuhi
+            
+
+                Sintak 
+                for(init statment;kondisi;post statment){
+                    block perulangan
+                }
+                - Init statement akan dieksekusi hanya sekali di awal sebelum perulangan
+                - Kondisi akan dilakukan pengecekan dalam setiap perulangan, jika true perulangan akan dilakukan,
+                  jika false perulangan akan berhenti
+                - Post statment akan dieksekusi setiap kali diakhir perulanagn
+                - Init statement, Kondisi dan Post Statement tidak wajib diisi, jika Kondisi tidak diisi, 
+                berarti kondisi selalu bernilai true
+            */
+
+            /* Perulangan Tanpa Henti*/
+            // for ( ; ;){
+            //     document.writeln("For Loop")
+            // }
+
+            /* Perulangan kondisi */
+            let counter = 1;
+            for ( ;counter <=10; ){
+                document.writeln(`kondisi ke ${counter}`);
+                counter++;
+            }
+
+            /* Perulangan Init Statment*/
+            document.writeln(" ");
+            for (let counter = 1; counter <= 10;){
+                document.writeln(`Perulangan ke ${counter}`);
+                counter++;
+            }
+            
+            /* Perulangan Post Statment */
+            document.writeln(" ");
+            for (let counter = 1; counter <= 10; counter++ ){
+                document.writeln(`Perulangan ke ${counter}`);
+            }
+        </script>
+    </pre>
+</body>
+</html>
