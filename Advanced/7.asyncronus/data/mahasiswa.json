@@ -1,0 +1,23 @@
+[
+    {
+        "nama" : "Nuevalen",
+        "nis" : "09876543",
+        "email" : "valen@gmail.com",
+       "jurusan" : "Teknic Electro",
+        "idDosenWali" : 1
+    },
+    {
+        "nama" : "yanto",
+        "nis" : "01234543",
+        "email" : "yanto@gmail.com",
+       "jurusan" : "Teknic Mesin",
+        "idDosenWali" : 2
+    },
+    {
+        "nama" : "budi",
+        "nis" : "01236543",
+        "email" : "budi@gmail.com",
+       "jurusan" : "Teknic BOM",
+        "idDosenWali" : 3
+    }
+]

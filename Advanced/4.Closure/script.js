@@ -1,51 +1,51 @@
+/* Lexical Scope */
 function init () {
+    /* Make local var  */
     let nama = 'valen'
     let umur = 17
     // function tampilNama(){
-    return function (nma){
-        let nama = 'galih'
-        console.log(nama);
-        console.log(umur);
+    return function (){  // inner function (closure)
+        console.info(nama); // acc parent variable
+        console.info(umur);
     }
-    console.log(tampilNama())
-    console.log(tampilNama)
+    console.info(tampilNama())
+    console.info(tampilNama)
     return tampilNama
 }
 
-init()
-
-let panggilNama = init()
+let panggilNama = init() // jalankan function inir
 panggilNama('valen')
 
-
-
-
+/* Make Closire (factory function ) */
 function ucapkanSalam(waktu){
     return function (nama){
-        console.log(`Halo ${nama}, selamat ${waktu}, semoga harimu menyenangkan`)
-    }
+        console.info(`Halo ${nama}, selamat ${waktu}, semoga harimu menyenangkan`)
+    } 
 }
 
+/* Add value param */
 let selamatPagi = ucapkanSalam('pagi')
 let selamatSiang = ucapkanSalam('siang')
 let selamatMalam = ucapkanSalam('malam')
 
+/* Output program */
 selamatPagi('kakak')
 selamatSiang('Ayang')
 selamatMalam('mama')
 
-console.dir(selamatMalam)
+console.dir(selamatMalam) // melihat dari isi var selamatMalam
 console.dir(selamatMalam('budi'))
 
 
+/* Make function closure */
 let add = function (){
-    let counter = 0
-    return function(){
+    let counter = 0 // make var
+    return function(){ // make closer
         return ++counter
 }
 }
 
 counter = 100
-console.log(add())
-console.log(add())
-console.log(add())
+console.info(add())
+console.info(add())
+console.info(add())

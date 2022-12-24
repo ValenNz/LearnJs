@@ -3,14 +3,16 @@ console.log(nama)   // akan undifined karna berum di deklarasi
 var nama = 'valen'
 
 /* Creation phase pada Global context 
-    -   nama var    : undefined
-    -   nama function : fn()
-    -   hositing
-    -   window  : global object
+    -   nama var    : undefined | -\
+    -   nama function : fn()    | -/    Hoisting
+    -   window  : global object | Mendefinisikan sebagai object global
     -   this    : whindow 
 */
 
-/* Execuition phase */
+/* Execuition phase 
+    -   Mengeksekusi dari atas kebawah
+*/
+/* Make Var */
 var nama = 'valen'
 var username = '@nuevalen_nz'
 
